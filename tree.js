@@ -6,11 +6,12 @@ export default function Tree(items, root, parent = null){
     
     listItems.forEach(item => {
 
-        const li = document.createElement('li')
         const div = document.createElement('div')
         div.innerText = item.name
-
+        
+        const li = document.createElement('li')
         li.append(div)
+
         ul.append(li)
 
         const subItems = items.filter(subItem => item.id === subItem.parent)
