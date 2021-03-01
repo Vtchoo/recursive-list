@@ -11,6 +11,6 @@ const items = [
     { id: 8, name: 'Fridges', parent: 2 }
 ]
 
-const root = document.querySelector('nav-tree')
+const root = document.querySelector('nav#tree')
 
-Tree(items, root, null)
+Tree(items, root)
