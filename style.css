@@ -2,6 +2,24 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: 0;
+
+    background-color: #303030;
+    color: whitesmoke;
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+li {
+    cursor: pointer;
+}
+
+li div {
+    padding: .25rem 0;
+    transition: background-color .2s;
+}
+
+li div:hover {
+    background-color: #575757;
 }
 
 li .collapsed {
