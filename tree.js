@@ -7,14 +7,22 @@ export default function Tree(items, root, parent = null){
     listItems.forEach(item => {
 
         const li = document.createElement('li')
-        li.innerText = item.name
+        const div = document.createElement('div')
+        div.innerText = item.name
 
+        li.append(div)
         ul.append(li)
 
         const subItems = items.filter(subItem => item.id === subItem.parent)
-        if(subItems.length)
-            Tree(items, li, item.id)
+        if(subItems.length){
+
+            const subList = Tree(items, li, item.id)
+
+            div.addEventListener('click', () => subList.classList.toggle('collapsed'))
+        }
     })
 
     root.append(ul)
+
+    return ul
 }
